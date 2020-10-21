@@ -1,0 +1,52 @@
+<html>
+<head>
+</head>
+<body>
+<h1>Task 1 : Object vs Array</h1>
+<h3>Determine the type of variable ,array1 and object1</h3>
+<p id="demo11"></p>
+<h3>Replace company with Google in the object and in array change "Anjali" to "Shubham"</h3>
+<p id="demo12"></p>
+<p id="demo13"></p>
+<h3>Replace Shubham with Anjali in myArray</h3>
+<p id="demo14"></p>
+<script>
+	let object1 = {
+		'name':'Ripul',
+		'company':'99Fusion',
+		'designation':'Cofounder'
+	};
+	let array1 = [
+		'Ripul',
+		'Anjali',
+		'Alex'
+	];
+
+	const myArray = [
+		'Pratibha',
+		'Shubham',
+		'Lavi'
+	];
+	// A : Determine the type of variable ,array1 and object1
+
+document.getElementById("demo11").innerHTML="Type of array1"+typeof(array1)+"Type of object1"+typeof(object1);
+// B : Replace company with Google in the object and in array change "Anjali" to "Shubham"
+document.getElementById("demo12").innerHTML="Name: "+object1.name+"</br>Company: "+object1.company+"</br>Designation:"+object1.designation;
+object1.company='Google';
+document.getElementById("demo13").innerHTML="Name: "+object1.name+"</br>Company: "+object1.company+"</br>Designation:"+object1.designation;
+// C : Replace Shubham with Anjali in myArray
+leng=myArray.length;
+for(var i=0; i<leng; i++){
+	if (myArray[i].toLowerCase()=="shubham"){
+		myArray[i]=="Anjali";
+		break;
+
+	}
+
+}
+document.getElementById("demo14").innerHTML=myArray;
+
+
+</script>
+</body>
+</html>
