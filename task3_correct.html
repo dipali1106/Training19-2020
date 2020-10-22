@@ -1,0 +1,112 @@
+<html>
+<body>
+<h1>Task 3 : Search and Replace Value</h1>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<script>
+
+	let users = [
+		{
+			'name':'Ripul',
+			'company':'99Fusion',
+			'designation':'Cofounder'
+		},
+		{
+			'name':'Alex',
+			'company':'99Fusion',
+			'designation':'Team Lead'
+		},
+		{
+			'name':'Shubham',
+			'company':'99Fusion',
+			'designation':'Senior Dev'
+		},
+		{
+			'name':'Anjali',
+			'company':'99Fusion',
+			'designation':'Serior Dev'
+		},
+	];
+
+
+	let values = [
+		[
+			{
+				'name':'Ripul',
+				'company':'99Fusion',
+				'designation':'Cofounder'
+			},
+			{
+				'name':'Alex',
+				'company':'99Fusion',
+				'designation':'Team Lead'
+			}
+		],
+		[
+			{
+				'name':'Shubham',
+				'company':'99Fusion',
+				'designation':'Senior Dev'
+			},
+			{
+				'name':'Anjali',
+				'company':'99Fusion',
+				'designation':'Serior Dev'
+			}
+		]
+	];
+	
+	// A : Find Alex in users and change name to "Anshuman"
+	function changeName(old,newname){
+		for (var i in users){
+			if(users[i].name===old){
+				users[i].name=newname;
+			}
+		}
+	}
+	changeName('Alex','Shubham');
+	for (var i in users){
+		if(users[i].name==='Shubham')
+		{
+		document.getElementById("demo1").innerHTML="Name: "+users[i].name+"</br> Company: "+users[i].company+"</br> Designation: "+users[i].designation;
+	}
+}
+	
+
+
+	
+	// B : Find Alex in values and change name to "Anshuman" 
+	function changeName2(old,newname){
+		for (var j in values){
+			for(var i in values[j]){
+				if(values[j][i].name===old){
+				values[j][i].name=newname;
+			}
+			}
+			
+		}
+	}
+	
+	changeName2('Alex','Anshuman');
+
+	for (var k in values)
+
+	{
+		for (var j in values[k])
+		{
+			console.log("hello");
+			if(values[k][j].name==='Anshuman')
+		{
+			
+
+		document.getElementById("demo2").innerHTML="Name: "+values[k][j].name+"</br> Company: "+values[k][j].company+"</br> Designation: "+values[k][j].designation;
+		}
+
+		}
+		
+	}
+
+</script>
+
+</body>
+</html>
